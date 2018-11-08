@@ -48,13 +48,13 @@
       }
       
       // ****** funcao casa livre ****************
-      //  identifica se a casa est·
+      //  identifica se a casa est√°
       //  entrada : vetor de posicoes de tamanho 9
       //            e a ficha do jogador '0' ou 'X'
       // ****************************************
       int casaLivre(char tab[9],int numCasa)
       {
-      	if(tab[numCasa-1]!='0' && tab[numCasa-1]!='X')
+      	if(tab[numCasa-1]!='0' && tab[numCasa-1]!='X' && numCasa > 0 && numCasa < 10)
       	    return true;
       	else 
       	    return false;
@@ -75,7 +75,7 @@
 	  	       desenhaTabuleiro(tab);
 	  	// 2.- passo. 
 		//       2.1 numero de jogadas -> total de 4 x jogador
-		//       2.2 perguntar a cada um deles a posiÁ„o de sua jogada   
+		//       2.2 perguntar a cada um deles a posi√ß√£o de sua jogada   
 		                
 		int numJogada=0;
 		int posEscolhidaJogador1, posEscolhidaJogador2;
@@ -102,7 +102,7 @@
 				  desenhaTabuleiro(tab); 	
 				  posJG1[numJogada]=posEscolhidaJogador1-1;
 				  
-				  //  Verificar se j· tem jogador
+				  //  Verificar se j√° tem jogador
 				   if(temGanhador(tab, 'X')){
 					     printf("\n\n Ganhador : JOGADOOR 1 !!");    
 					     break;
@@ -120,7 +120,7 @@
 				  desenhaTabuleiro(tab); 	
 				  posJG2[numJogada]=posEscolhidaJogador2-1;
 				  
-				  //  Verificar se j· tem jogador
+				  //  Verificar se j√° tem jogador
 				   if(temGanhador(tab, '0')){
 					     printf("\n\n Ganhador : JOGADOOR 2 !!"); 
 					     break;
